@@ -94,3 +94,4 @@ noremap <leader>lt :!rspec % -l <C-r>=line('.')<CR><CR>
 " These are all actually ruby files
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,config.ru,*.gemspec} set ft=ruby
 
+au BufRead,BufNewFile {*.md} set ft=markdown
