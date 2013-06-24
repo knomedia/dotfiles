@@ -1,0 +1,14 @@
+[user]
+	name = jsk
+	email = knomedia@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[format]
+	pretty = "Commit:  %C(yellow)%H%nAuthor:  %C(green)%aN <%aE>%nDate:    (%C(red)%ar%Creset) %ai%nSubject: %s%n%n%b"
+
+
+[core]
+	exludesfile = /Users/jmadsen/.gitignore
+	excludesfile = /Users/jmadsen/.gitignore
