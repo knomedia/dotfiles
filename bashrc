@@ -29,6 +29,8 @@ alias gb="git branch"
 alias gco="git checkout"
 alias rc="rails console"
 
+alias be="bundle exec"
+
 PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
