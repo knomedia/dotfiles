@@ -30,6 +30,7 @@ alias gco="git checkout"
 alias rc="rails console"
 
 alias be="bundle exec"
+alias readme="hubdown README.md -w | browser"
 
 PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
 
