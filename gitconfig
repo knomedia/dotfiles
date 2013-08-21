@@ -12,3 +12,10 @@
 [core]
 	exludesfile = /Users/jmadsen/.gitignore
 	excludesfile = /Users/jmadsen/.gitignore
+
+[alias]
+  logp = log --pretty=format:\"%h|%an|%ar: %s\" --graph
+  logme = log --pretty=format:\"%h|%an|%ar: %s\" --graph --author=jsk
+  this = !git init && git add . && git commit -m \"Initial commit\"
+  r  = !git ls-files -z --deleted | xargs -0 git rm
+  aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ => \\2/' | sort
