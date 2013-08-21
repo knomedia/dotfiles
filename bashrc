@@ -1,4 +1,5 @@
 #PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH="$HOME/.rvm/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin
 
