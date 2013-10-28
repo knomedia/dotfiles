@@ -4,6 +4,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin
 
 source ~/.profile
+source ~/.git-prompt.sh
 
 PS1='\[$(tput setaf 6)\][\W]\[$(tput sgr0)\]\[$(tput setaf 2)\]$(__git_ps1 "[git:%s]")\[$(tput sgr0)\]\[$(tput setaf 6)\]$ \[$(tput sgr0)\]'
 PS2='\[$(tput setaf 6)\]> \[$(tput sgr0)\]'
