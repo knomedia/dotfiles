@@ -2,6 +2,7 @@
 export PATH="$HOME/.rvm/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin
+PATH=$PATH:node_modules/.bin
 
 source ~/.profile
 source ~/.git-prompt.sh
@@ -20,7 +21,7 @@ function find_rails() {
 function kill_help() {
   echo "kill -9 proc_id"
 }
-[[ -f ~/.autojump/etc/profile.d/autojump.bash ]] && source ~/.autojump/etc/profile.d/autojump.bash
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 alias ls="ls -G"
 alias gs="git status"
@@ -32,6 +33,7 @@ alias gco="git checkout"
 alias rc="rails console"
 
 alias be="bundle exec"
+alias bake="bundle exec rake"
 alias readme="hubdown README.md -w | browser"
 
 PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting

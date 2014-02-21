@@ -73,7 +73,8 @@ map <leader>c <c-_><c-_>
 " Map F5 as a re-load of file system for Command T"
 noremap <F5> :CommandTFlush<CR>
 
-" Open system color picker
+" Open system color picker (install from
+" https://github.com/jnordberg/color-pick
 inoremap <C-X>c #<C-R>=system('colorpick')<CR>
 
 " easier nerdtree
@@ -86,18 +87,38 @@ map :hub :!hubdown % -w <bar> browser<CR>
 map :subl :!subl %<CR>
 
 " run rspec on current file
-noremap <leader>rt :!rspec %<CR>
+noremap <leader>rt :!bundle exec rspec %<CR>
 
 " run rspec for curren line
-noremap <leader>lt :!rspec % -l <C-r>=line('.')<CR><CR>
+noremap <leader>lt :!bundle exec rspec % -l <C-r>=line('.')<CR><CR>
+
+" run spec on current file
+noremap <leader>rs :!bundle exec spec %<CR>
+noremap <leader>ls :!bundle exec spec % -l <C-r>=line('.')<CR><CR>
+
+" Mustacher - Handlebars
+let g:mustache_abbreviations = 1
+au BufRead,BufNewFile {*.hbs,*.handlebars} set ft=handlebars
 
 " These are all actually ruby files
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,config.ru,*.gemspec} set ft=ruby
 
-" au BufRead,BufNewFile {*.md} set ft=markdown
+" es6 as js
+au BufNewFile,BufRead *.es6 set filetype=javascript
 
+" au BufRead,BufNewFile {*.md} set ft=markdown
 augroup markdown
   au!
   " au BufRead,BufNewFile {*.md, *.markdown} set ft=ghmarkdown
   au BufRead,BufNewFile *.md,*.markdown set ft=ghmarkdown
 augroup END
+
+" gist.vim settings
+" filetype from gist name
+let g:gist_detect_filetype = 1
+
+" open gist in browser after post
+let g:gist_open_browser_after_post = 1
+
+" private gists by default
+let g:gist_post_private = 1
