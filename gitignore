@@ -1,4 +1,7 @@
 .DS_Store
-.ruby-version
 *.swp
 node_modules/
+vendor/plugins/custom_reports
+vendor/plugins/instructure_misc_plugin
+vendor/plugins/multiple_root_accounts
+vendor/plugins/respondus_lockdown_browser

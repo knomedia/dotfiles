@@ -87,10 +87,10 @@ map :hub :!hubdown % -w <bar> browser<CR>
 map :subl :!subl %<CR>
 
 " run rspec on current file
-noremap <leader>rt :!bundle exec rspec %<CR>
+noremap <leader>rt :! bundle exec rspec %<CR>
 
-" run rspec for curren line
-noremap <leader>lt :!bundle exec rspec % -l <C-r>=line('.')<CR><CR>
+" run rspec for current line
+noremap <leader>lt :! bundle exec rspec % -l <C-r>=line('.')<CR><CR>
 
 " run spec on current file
 noremap <leader>rs :!bundle exec spec %<CR>
@@ -113,6 +113,8 @@ augroup markdown
   au BufRead,BufNewFile *.md,*.markdown set ft=ghmarkdown
 augroup END
 
+"
+
 " gist.vim settings
 " filetype from gist name
 let g:gist_detect_filetype = 1
@@ -122,3 +124,11 @@ let g:gist_open_browser_after_post = 1
 
 " private gists by default
 let g:gist_post_private = 1
+
+" ignore some dirs from command-t
+:set wildignore+=node_modules/**,bower_components/**,public/optimized/**,*-ember/node_modules/**,tmp/**
+
+function CamelFileName(...)
+  let fname = Filename("", "ClassName")
+  return substitute(fname, '\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)', '\u\1\2', "g")
+endfunction

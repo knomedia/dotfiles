@@ -3,6 +3,10 @@ export PATH="$HOME/.rvm/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin
 PATH=$PATH:node_modules/.bin
+PATH=$PATH:/Users/jmadsen/Documents/_shed/sdks/android-sdk-macosx/tools
+PATH=$PATH:/Users/jmadsen/Documents/_shed/sdks/android-sdk-macosx/platform-tools
+
+export HOMEBREW_GITHUB_API_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 source ~/.profile
 source ~/.git-prompt.sh
@@ -20,6 +24,10 @@ function find_rails() {
 }
 function kill_help() {
   echo "kill -9 proc_id"
+}
+
+function gif() {
+  gifify
 }
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
